@@ -1,0 +1,144 @@
+/***************************** Le wrapper pour pouvoir faire la grid *****************************/
+.information-page {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(200px, auto);
+}
+
+
+/***************************** Paragraphe introduction sur les lapin *****************************/
+.introduction-texte {
+  grid-column: 1 / 2;
+  grid-row: 1;
+  text-align: justify;
+  padding: 10% 10% 0 10%;
+  font-size: large;
+}
+
+.introduction-texte-box {
+  background-color: #e0ece4;
+  padding: 60px 80px 80px 80px;
+}
+
+.introduction-image {
+  grid-column: 2 / 3;
+  grid-row: 1;
+}
+
+
+/***************************** Paragraphe sur les origines du lapin *****************************/
+.origine-lapin {
+  grid-column: 1 / 3;
+  grid-row: 2;
+  margin: 20px 115px 15px 85px;
+}
+
+.origine-lapin-box {
+  padding: 20px 40px 40px 40px;
+  background-color: #efeeee;
+}
+
+
+/***************************** Paragraphe sur les particularités du lapin *****************************/
+.particularités-lapin {
+  grid-column: 1 / 3;
+  grid-row: 3;
+  margin: 0 75px 15px 125px;
+}
+
+.particularités-lapin-box {
+  padding: 20px 40px 40px 40px;
+  background-color: #e0ece4;
+}
+
+
+/***************************** Paragraphe sur le caractère et le comportement du lapin *****************************/
+.caractere-comportement-lapin {
+  grid-column: 1 / 3;
+  grid-row: 4;
+  margin: 0 100px 15px 100px;
+}
+
+.caractere-comportement-lapin-box {
+  padding: 20px 40px 40px 40px;
+  background-color: #efeeee;
+}
+
+
+/***************************** Paragraphe sur les conditions de vie du lapin *****************************/
+.vie-lapin {
+  grid-column: 1 / 3;
+  grid-row: 5;
+  margin: 0 125px 15px 75px;
+}
+
+.vie-lapin-box {
+  padding: 20px 40px 40px 40px;
+  background-color: #e0ece4;
+}
+
+
+/***************************** Paragraphe sur la cage du lapin *****************************/
+.cage-lapin {
+  grid-column: 2 / 3;
+  grid-row: 6;
+  padding: 10% 10% 0 0;
+}
+
+.cage-lapin-box {
+  padding: 20px 40px 40px 40px;
+  background-color: #efeeee;
+}
+
+.cage-lapin-image {
+  grid-column: 1 / 2;
+  grid-row: 6;
+  margin-left: 30px ;
+}
+
+/***************************** Paragraphe sur l'alimentation du lapin *****************************/
+.alimentation-lapin {
+  grid-column: 1 / 3;
+  grid-row: 7;
+  margin: 10px 125px 15px 75px;
+}
+
+.alimentation-lapin-box {
+  padding: 20px 40px 40px 40px;
+  background-color: #e0ece4;
+}
+
+
+/***************************** Paragraphe sur la santé et l'hygiène du lapin *****************************/
+.santé-hygiene-lapin {
+  grid-column: 1 / 3;
+  grid-row: 8;
+  margin: 0 100px 15px 100px;
+}
+
+.santé-hygiene-lapin-box {
+  padding: 20px 40px 40px 40px;
+  background-color: #efeeee;
+}
+
+
+/***************************** L'effet néon sur les titres de paragraphes  *****************************/
+h1 {
+  color: #222;
+  letter-spacing: 5px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: 0.5s;
+}
+
+h1:hover {
+  color: #ffffff;
+  text-shadow: 0 0 5px #395e5e, 0 0 25px #395e5e, 0 0 50px #395e5e, 0 0 100px #395e5e;
+}
+
+
+/***************************** Changer l'apparence des puces  *****************************/
+ul {
+  list-style-image: url("../../assets/images/puceRabbit.png");
+}

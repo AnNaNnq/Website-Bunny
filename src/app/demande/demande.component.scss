@@ -1,0 +1,29 @@
+@font-face {
+  font-family: 'Flower';
+  src: url('../../assets/fonts/Beauty Flower.ttf');
+}
+
+/***************************** Apparance des cartes des demandes  *****************************/
+.carte-demande {
+  width: 800px;
+  height: 200px;
+  margin: 30px 0 20px 10px;
+  padding-top: 5px;
+  background-color: #e0ece4;
+  box-shadow: #a6a4a4 4px 4px 20px;
+  transition: 0.8s;
+}
+
+.carte-demande:hover {
+  transform: scale(1.05);
+}
+
+p {
+  margin: 0 10px 10px 10px;
+}
+
+h2 {
+  font-family: Flower, serif;
+  font-size: 60px;
+  margin: 10px 0 15px 10px;
+}

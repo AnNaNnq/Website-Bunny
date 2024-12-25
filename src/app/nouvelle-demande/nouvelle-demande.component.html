@@ -1,0 +1,29 @@
+<div class="container-formulaire">
+  <div class="carte-formulaire">
+    <h2> Ecrivez un Commentaire </h2>
+    <form [formGroup]="nouvelleDemandeFormulaire">
+
+      <div class="donnee-formulaire">
+        <label for="pseudo"> Pseudo<sup>*</sup></label>
+        <input id="pseudo" type="text" formControlName="pseudo">
+      </div>
+
+      <div class="donnee-formulaire">
+        <label for="commentaire"> Commentaire<sup>*</sup></label>
+        <textarea id="commentaire" type="text" formControlName="commentaire" rows="2"> </textarea>
+      </div>
+
+      <div *ngIf="nouvelleDemandeFormulaire.invalid">
+        <span class="message-erreur"> Veuillez compléter tous les champs.</span>
+      </div>
+      <div>
+        <button type="submit" (click)="onSubmitForm()" [disabled]="nouvelleDemandeFormulaire.invalid"> Créer le commentaire
+        </button>
+      </div>
+    </form>
+  </div>
+
+  <div class="container-demandes">
+    <app-demande *ngFor="let demandes of demandes" [demande]="demandes"></app-demande>
+  </div>
+</div>

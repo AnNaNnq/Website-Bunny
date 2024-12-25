@@ -1,0 +1,9 @@
+<div class="container-objet">
+  <span *ngFor="let objets of objets">
+    <span [ngSwitch]="objets.type">
+      <span *ngSwitchCase="'nourriture'">
+        <app-objet [objet]="objets"></app-objet>
+      </span>
+    </span>
+  </span>
+</div>

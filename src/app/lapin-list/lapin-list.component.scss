@@ -1,0 +1,12 @@
+.container-lapin {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.message {
+  color: darkgreen;
+  font-style: italic;
+  text-align: center;
+}

@@ -1,0 +1,94 @@
+@font-face {
+  font-family: 'Flower';
+  src: url('../../assets/fonts/Beauty Flower.ttf');
+}
+
+
+/***************************** Afficher les 2 l'un à côté de l'autre *****************************/
+.container-formulaire {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+
+/***************************** Donner une jolie apparance au formulaire *****************************/
+.carte-formulaire {
+  box-sizing: border-box;
+  width: 45%;
+  margin: 5px;
+  padding: 10px 30px;
+  box-shadow: #b6b5b5 4px 4px 20px;
+}
+
+
+/***************************** Donner la même apparance à la carte que dans la liste *****************************/
+.carte-lapin {
+  text-align: left;
+  width: 360px;
+  height: 460px;
+  margin: 30px 0 20px 10px;
+  padding-top: 5px;
+  background-color: #e0ece4;
+  box-shadow: #a6a4a4 4px 4px 20px;
+  transition: 0.8s;
+  border: none;
+}
+
+.carte-lapin:hover {
+  transform: scale(1.05);
+}
+
+p {
+  margin: 0 10px 10px 10px;
+}
+
+img {
+  display: block;
+  margin: auto;
+}
+
+h2 {
+  font-family: Flower, serif;
+  font-size: 60px;
+  margin: 10px 0 0 10px;
+}
+
+ul {
+  margin-top: 0;
+  list-style-image: url("../../assets/images/puceRabbit.png");
+}
+
+
+/***************************** Organiser les champs d'entrée de l'utilisateur *****************************/
+.donnee-formulaire {
+  margin: 10px auto;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+/***************************** Donner une jolie apparance au bouton *****************************/
+button {
+  display: block;
+  margin: 20px auto;
+  padding: 8px;
+  border: none;
+}
+
+/***************************** Donner une jolie apparance au message d'erreur *****************************/
+.message-erreur {
+  color: darkgreen;
+  font-style: italic;
+}
+
+/***************************** Donner une jolie apparance au message du début *****************************/
+.message-debut {
+  padding: 30px;
+  margin : 0 0 20px 0;
+  background-color: #efeeee;
+}
+

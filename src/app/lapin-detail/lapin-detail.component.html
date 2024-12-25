@@ -1,0 +1,15 @@
+<div class="container-lapin">
+  <button routerLink="/list-lapins">  ← </button>
+  <div class="carte-lapin">
+    <img [src]=lapin.photo alt="photo" width="650px" height="430px">
+
+    <h2> {{ lapin.nom | uppercase }} </h2>
+
+    <ul>
+      <li> {{ lapin.sexe }}</li>
+      <li> Né le {{ lapin.dateNaissance | date: 'dd MMMM yyyy' }} ({{ lapin.dateNaissance | age}})</li>
+      <li> {{ lapin.couleur }} </li>
+    </ul>
+    <p> {{ lapin.caractere }} </p>
+  </div>
+</div>

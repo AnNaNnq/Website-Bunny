@@ -1,0 +1,35 @@
+@font-face {
+  font-family: 'Starborn';
+  src: url('../../assets/fonts/Starborn.ttf');
+}
+
+header {
+  text-align: center;
+  background-color: #c7f3d4;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+a {
+  margin: 0 10px;
+  color: #000000;
+  text-decoration: none;
+  font-size: 20px;
+  &:hover {
+    font-weight: bold;
+    color: green;
+  }
+}
+
+h1 {
+  font-size: 70px;
+  margin: 0 0 12px 0;
+  padding-bottom: 8px;
+  border-bottom: 1px solid black;
+  font-family: Starborn, serif;
+}
+
+.active {
+  font-weight: bold;
+  color: green;
+}

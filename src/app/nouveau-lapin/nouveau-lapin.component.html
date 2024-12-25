@@ -1,0 +1,63 @@
+<div class="message-debut"> La décision de se séparer de son animal de compagnie, quel qu’il soit, doit être bien réfléchie.
+  Il doit s’agir d’une décision de dernier recours après avoir étudié toutes les solutions vous permettant de garder
+  votre animal auprès de vous. <br/>
+  Mais si vous souhaitez toujours le faire, on accepte volontier de prendre soin de votre animal ! Remplissez juste ce
+  formulaire, et nous vous contacterons sous peu de temps.
+</div>
+
+<div class="container-formulaire">
+  <div class="carte-formulaire">
+    <h2> Ajoutez votre lapin </h2>
+    <form [formGroup]="nouveauLapinFormulaire">
+
+      <div class="donnee-formulaire">
+        <label for="nom"> Nom<sup>*</sup></label>
+        <input id="nom" type="text" formControlName="nom">
+      </div>
+
+      <div class="donnee-formulaire">
+        <label for="photo"> Photo<sup>*</sup> (lien url ou vers dossier)</label>
+        <input id="photo" type="text" formControlName="photo">
+      </div>
+
+      <div class="donnee-formulaire">
+        <label for="sexe">Sexe<sup>*</sup> (Mâle ou Femelle)</label>
+        <input id="sexe" type="text" formControlName="sexe">
+      </div>
+
+      <div class="donnee-formulaire">
+        <label for="dateNaissance"> Date de Naissance<sup>*</sup> (aaaa-mm-jj)</label>
+        <input id="dateNaissance" type="text" formControlName="dateNaissance">
+      </div>
+
+      <div class="donnee-formulaire">
+        <label for="couleur"> Couleur(s)<sup>*</sup></label>
+        <input id="couleur" type="text" formControlName="couleur">
+      </div>
+
+      <div class="donnee-formulaire">
+        <label for="caractere"> Caractère<sup>*</sup></label>
+        <textarea id="caractere" type="text" formControlName="caractere" rows="2"> </textarea>
+      </div>
+
+      <div *ngIf="nouveauLapinFormulaire.invalid">
+        <span class="message-erreur"> Veuillez compléter tous les champs.</span>
+      </div>
+      <div>
+        <button type="submit" (click)="onSubmitForm()" [disabled]="nouveauLapinFormulaire.invalid"> Créer l'annonce
+        </button>
+      </div>
+    </form>
+  </div>
+
+  <div class="carte-lapin" *ngIf="nouveauLapinVue$ | async as lapin">
+    <img [src]=lapin.photo alt="photo" width="350px" height="230px">
+    <h2> {{ lapin.nom | uppercase }} </h2>
+    <ul>
+      <li> {{ lapin.sexe }}</li>
+      <li> Né le {{ lapin.dateNaissance | date: 'dd MMMM yyyy' }} </li>
+      <li> {{ lapin.couleur }} </li>
+    </ul>
+    <p> {{ lapin.caractere }} </p>
+  </div>
+</div>
